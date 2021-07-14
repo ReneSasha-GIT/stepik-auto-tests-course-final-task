@@ -23,4 +23,4 @@ class ProductPage(BasePage):
     def should_be_correct_add_price(self, product_price):
         add_price = self.browser.find_element(*ProductPageLocators.ADD_PRICE)
         assert add_price.text == product_price, f"Price in add-to-basket message is \"{add_price.text}\", but " \
-                                                     f"price on product page is \"{product_price}\""
+                                                f"price on product page is \"{product_price}\""
