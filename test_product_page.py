@@ -8,5 +8,5 @@ def test_guest_can_add_product_to_basket(browser):
     page.open()
     page.add_to_basket()
     page.solve_quiz_and_get_code()
-    page.should_be_correct_add_title()
-    page.should_be_correct_add_price()
+    page.should_be_correct_add_title(page.return_product_title())
+    page.should_be_correct_add_price(page.return_product_price())
