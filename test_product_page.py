@@ -13,7 +13,7 @@ class TestUserAddToBasketFromProductPage:
         page = LoginPage(browser, link)
         page.open()
         email = str(time.time()) + "@fakemail.org"
-        password = "123ghj456!"
+        password = str(time.time())
         page.register_new_user(email, password)
         page.should_be_authorized_user()
 
